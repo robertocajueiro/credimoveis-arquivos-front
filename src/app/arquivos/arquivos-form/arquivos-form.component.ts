@@ -13,14 +13,18 @@ export class ArquivosFormComponent implements OnInit {
 
 
   constructor( private service: ArquivosService ) {
-    this.arquivo = service.getArquivo();
+    this.arquivo = new Arquivo();
   }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    console.log(this.arquivo)
+    this.service
+    .salvar(this.arquivo)
+    .subscribe(response => {
+      console.log(response)
+    })
   }
 
 }

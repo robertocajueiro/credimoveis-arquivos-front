@@ -1,6 +1,7 @@
 import { Arquivo } from './arquivos/arquivo';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,11 @@ import { HttpClient } from '@angular/common/http'
 export class ArquivosService {
 
   constructor( private http: HttpClient) {
-    this.http.
+
+  }
+
+  salvar( arquivo: Arquivo) : Observable<Arquivo> {
+    return this.http.post<Arquivo>('http://localhost:8080/api/arquivos', arquivo)
   }
 
   getArquivo() : Arquivo {
