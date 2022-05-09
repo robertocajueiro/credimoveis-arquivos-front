@@ -10,9 +10,16 @@ export class ArquivosFormComponent implements OnInit {
 
   arquivo!: Arquivo;
 
-  constructor() { }
+
+  constructor() {
+    this.arquivo = new Arquivo();
+  }
 
   ngOnInit(): void {
+  }
+
+  clicar(){
+    console.log(this.arquivo)
   }
 
 }

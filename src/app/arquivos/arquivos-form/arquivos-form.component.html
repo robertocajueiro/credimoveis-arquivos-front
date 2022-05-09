@@ -4,21 +4,22 @@
 </ol>
 
   <div class="container">
-
     <form>
       <!--1º Linha form-->
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
             <label>ID:</label>
-            <input type="text" class="form-control" disabled />
+            <input type="text" class="form-control"
+            [ngModel]="arquivo.id_caixa" name="id_caixa" disabled="true" />
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             <label>Data Inclusão:</label>
-            <input type="text" class="form-control" disabled />
+            <input type="text" class="form-control"
+            [ngModel]="arquivo.data_inclusao" name="data_inclusao" disabled="true" />
           </div>
         </div>
       </div>
@@ -28,14 +29,16 @@
         <div class="col-md-6">
           <div class="form-group">
             <label>Período inicial:</label>
-            <input type="text" class="form-control" placeholder="dd/MM/yyy"/>
+            <input type="text" class="form-control"
+            [(ngModel)]="arquivo.periodo_ini" name="periodo_ini" placeholder="dd/MM/yyy"/>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             <label>Período Final:</label>
-            <input type="text" class="form-control" placeholder="dd/MM/yyy" />
+            <input type="text" class="form-control"
+            [(ngModel)]="arquivo.periodo_fim" name="periodo_fim" placeholder="dd/MM/yyy" />
           </div>
         </div>
       </div>
@@ -45,14 +48,16 @@
         <div class="col-md-6">
           <div class="form-group">
             <label>Endereço:</label>
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control"
+            [(ngModel)]="arquivo.endereco" name="endereco" />
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             <label>Filial:</label>
-            <input type="text" class="form-control"  />
+            <input type="text" class="form-control"
+            [(ngModel)]="arquivo.filiais" name="filiais" />
           </div>
         </div>
       </div>
@@ -62,28 +67,31 @@
           <div class="col-md-4">
             <div class="form-group">
               <label>Doc 01:</label>
-              <input type="text" class="form-control" />
+              <input type="text" class="form-control"
+              [(ngModel)]="arquivo.doc_01" name="doc_01" />
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="form-group">
               <label>Doc 02:</label>
-              <input type="text" class="form-control"  />
+              <input type="text" class="form-control"
+              [(ngModel)]="arquivo.doc_02" name="doc_02"  />
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="form-group">
               <label>Doc 03:</label>
-              <input type="text" class="form-control"  />
+              <input type="text" class="form-control"
+              [(ngModel)]="arquivo.doc_03" name="doc_03"  />
             </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-2">
-            <button type="submit" class="btn btn-success">
+            <button type="submit" class="btn btn-success" (click)="clicar()">
               <i class="fa fa-save"></i> Salvar
             </button>
           </div>
