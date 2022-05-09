@@ -5,6 +5,19 @@
 
   <div class="container">
     <form #arquivoForm="ngForm" (ngSubmit)="onSubmit()">
+      <!-- Alerta mensagem-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-success" role="alert" *ngIf="success == true">
+           Arquivo Salvo/Atualizado com Sucesso!
+          </div>
+
+          <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+            {{ erro }}
+          </div>
+
+        </div>
+      </div>
       <!--1º Linha form-->
       <div class="row">
         <div class="col-md-6">

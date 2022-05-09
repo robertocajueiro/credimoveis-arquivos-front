@@ -10,6 +10,8 @@ import { ArquivosService } from '../../arquivos.service';
 export class ArquivosFormComponent implements OnInit {
 
   arquivo!: Arquivo;
+  success: boolean = false;
+  errors!: string[];
 
 
   constructor( private service: ArquivosService ) {
@@ -23,7 +25,7 @@ export class ArquivosFormComponent implements OnInit {
     this.service
     .salvar(this.arquivo)
     .subscribe(response => {
-      console.log(response)
+      this.success = true;
     })
   }
 
