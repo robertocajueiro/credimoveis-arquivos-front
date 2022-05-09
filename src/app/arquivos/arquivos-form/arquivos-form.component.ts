@@ -18,7 +18,7 @@ export class ArquivosFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clicar(){
+  onSubmit(){
     console.log(this.arquivo)
   }
 
