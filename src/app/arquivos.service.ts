@@ -1,12 +1,15 @@
 import { Arquivo } from './arquivos/arquivo';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArquivosService {
 
-  constructor() { }
+  constructor( private http: HttpClient) {
+    this.http.
+  }
 
   getArquivo() : Arquivo {
     let arquivo : Arquivo = new Arquivo();
