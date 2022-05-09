@@ -26,7 +26,10 @@ export class ArquivosFormComponent implements OnInit {
     .salvar(this.arquivo)
     .subscribe(response => {
       this.success = true;
-    })
+    } , errorResponse => {
+      this.errors = errorResponse.error.errors;
+      }
+    )
   }
 
 }
