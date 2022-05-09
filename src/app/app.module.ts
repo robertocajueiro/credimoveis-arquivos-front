@@ -9,6 +9,8 @@ import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
+import { ArquivosService } from './arquivos.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     BrowserAnimationsModule,
     ArquivosModule
   ],
-  providers: [],
+  providers: [
+    ArquivosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
