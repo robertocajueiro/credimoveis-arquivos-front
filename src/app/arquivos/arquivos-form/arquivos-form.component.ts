@@ -31,6 +31,7 @@ export class ArquivosFormComponent implements OnInit {
     } , errorResponse => {
       this.success = false;
       this.errors = errorResponse.error.errors;
+      console.log(this.errors)
       }
     )
   }

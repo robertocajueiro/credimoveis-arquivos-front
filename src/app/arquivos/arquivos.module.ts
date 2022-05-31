@@ -4,19 +4,23 @@ import { FormsModule } from '@angular/forms';
 
 import { ArquivosRoutingModule } from './arquivos-routing.module';
 import { ArquivosFormComponent } from './arquivos-form/arquivos-form.component';
+import { ArquivosTableComponent } from './arquivos-table/arquivos-table.component'
+
 
 
 
 @NgModule({
   declarations: [
-    ArquivosFormComponent
+    ArquivosFormComponent,
+    ArquivosTableComponent
   ],
   imports: [
     CommonModule,
     ArquivosRoutingModule,
     FormsModule
   ], exports: [
-    ArquivosFormComponent
+    ArquivosFormComponent,
+    ArquivosTableComponent
   ]
 })
 export class ArquivosModule { }
